@@ -59,14 +59,27 @@ public class linkedList {
         Node currNode = head.next;
 
         while(currNode != null){
+            // 1 -> 2 -> 6 -> 3 -> 4 -> 6 -> null
+            //prev curr next
             Node nextNode = currNode.next;
+            // point curr to prev
             currNode.next = prevNode;
 
+            // iterate the node  by one step
             prevNode = currNode;
             currNode = nextNode;
         }
+        // after reversal head should be pointing to null
+        // 6 -> 4 -> 3 -> 6 -> 2 -> 1 -> null
         head.next = null;
+        // prev will become the new head after reversal
         head = prevNode;
+    }
+
+    public Node removeElement( Node head, int val){
+        if(head == null) return null;
+        head.next = removeElement(head.next, val);
+        return (head.data == val) ? head.next : head;
     }
 
     public static void main(String[] args) {
@@ -87,10 +100,12 @@ public class linkedList {
 //        System.out.println(list);
         list.addLast(1);
         list.addLast(2);
+        list.addLast(6);
         list.addLast(3);
         list.addLast(4);
-        list.addLast(5);
+        list.addLast(6);
         list.printList();
+//        list.removeElement(list.head, 6);
         list.reverseIterative();
         list.printList();
     }

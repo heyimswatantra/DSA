@@ -1,2 +1,5 @@
-package LEETCODE;public class panlindromeLinkedList {
+package LEETCODE;
+
+public class panlindromeLinkedList {
+
 }
