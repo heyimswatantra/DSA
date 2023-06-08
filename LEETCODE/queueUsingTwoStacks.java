@@ -9,7 +9,7 @@ public class queueUsingTwoStacks {
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
 
-        public static boolean isEmpty() {
+        public static boolean empty() {
             return s1.isEmpty();
         }
 
@@ -26,7 +26,7 @@ public class queueUsingTwoStacks {
         }
 
         public static int remove() {
-            if(isEmpty()) {
+            if(empty()) {
                 System.out.println("queue is empty");
                 return -1;
             }
@@ -34,7 +34,7 @@ public class queueUsingTwoStacks {
         }
 
         public static int peek() {
-            if(isEmpty()) {
+            if(empty()) {
                 System.out.println("queue is empty");
                 return -1;
             }
@@ -51,7 +51,7 @@ public class queueUsingTwoStacks {
         q.add(4);
         q.add(5);
 
-        while(!q.isEmpty()) {
+        while(!q.empty()) {
             System.out.println(q.remove());
         }
 
