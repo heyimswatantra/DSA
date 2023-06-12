@@ -1,3 +1,5 @@
+package CONCEPTS;
+
 public class binarySearch {
 
     static int binarySearch(int[] arr, int target) {
