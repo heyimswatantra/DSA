@@ -16,15 +16,6 @@ public class timeNeededToBuyTIckets {
             if(tickets[index] > 0) queue.add(index);
         }
         return ans;
-//        int a = 0;
-//        int cnt = 0;
-//        while (tickets[a++] >= 1) {
-//            for (int i = 0; i < tickets.length; i++) {
-//                if (tickets[i] >= 1) tickets[i] -= 1;
-//                cnt++;
-//            }
-//        }
-//        return cnt;
     }
 
     public static void main(String[] args) {
