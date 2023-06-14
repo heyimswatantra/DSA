@@ -6,7 +6,7 @@ import java.util.Stack;
 public class largestRectangleInHistogram {
     //https://leetcode.com/problems/largest-rectangle-in-histogram/
 
-    //better approach
+    //better approach (multiple passes)
     public static int largestRectangleArea(int[] heights) {
         int n = heights.length;
         Stack<Integer> st = new Stack<>();
@@ -44,7 +44,7 @@ public class largestRectangleInHistogram {
         return maxiA;
     }
 
-    //optimal approach
+    //optimal approach (single pass)
     public static int largestRectArea(int[] heights){
         int maxA = 0;
         Stack<Integer> st = new Stack<>();
