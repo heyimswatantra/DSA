@@ -1,22 +1,22 @@
 class secondLargest {
     public static int getSecondLargest(int[] arr) {
         // code here
-        int largest = Integer.MIN_VALUE;
-        int secondLargest = largest;
+        int largest = arr[0];
+        int secondLargest = Integer.MIN_VALUE;
 
         int n = arr.length;
-        for (int i : arr) {
-            if (i > largest) {
+        for (int i=1; i<n; i++) {
+            if (arr[i] > largest) {
                 secondLargest = largest;
-                largest = i;
-            } else if (i > secondLargest) {
-                secondLargest = i;
+                largest = arr[i];
+            } else if (arr[i] < largest && arr[i] > secondLargest) {
+                secondLargest = arr[i];
             }
         }
         return secondLargest;
     }
 
     public static void main(String[] args) {
-        System.out.println(getSecondLargest(new int[]{1,2,3,6,4,7,19}));
+        System.out.println(getSecondLargest(new int[]{10,5,10}));
     }
 }
